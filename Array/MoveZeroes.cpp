@@ -1,16 +1,14 @@
 // leet code 283
-class Solution 
-{
+class Solution {
 public:
     void moveZeroes(vector<int>& nums) {
-        int z =		0;
-	for (int i = 0; i < nums.size(); i++)
-	{
-		if (nums[i] != 0)
-		{
-			swap(nums[i],nums[z]);
-			z++;
-		}
-	}
-  }
+        int position = 0;
+        for(int i=0;i<nums.size();i++)
+        {
+            if(nums[i] != 0)
+            {
+                swap(nums[i],nums[position++]);
+            }
+        }
+    }
 };
