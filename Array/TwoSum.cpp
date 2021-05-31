@@ -16,7 +16,6 @@ public:
     }
 };
 
-
 // Two Pointers
 class Solution {
 public:
