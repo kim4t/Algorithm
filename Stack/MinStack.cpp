@@ -1,4 +1,5 @@
 // leecode 155
+
 class MinStack {
 private:
     stack<int> s1;
