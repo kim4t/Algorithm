@@ -14,3 +14,29 @@ class Solution {
         return res;
     }
 }
+
+
+
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+        int left = 0;
+        int right = 0;
+        int res = 0;
+        
+        Set<Character> hs = new HashSet<>();
+        while(right<s.length()){
+            char c = s.charAt(right);
+            if(hs.contains(c)){
+                while(hs.contains(s.charAt(right))){
+                    hs.remove(s.charAt(left));
+                    left++;
+                } 
+            }
+            hs.add(c);
+            res = Math.max(res,right-left+1);
+            right++;
+              
+        }
+        return res;
+    }
+}
